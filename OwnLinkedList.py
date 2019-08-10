@@ -64,14 +64,13 @@ class LinkedList:
                 cur_index = 0
 
                 while True:
-                    previous = temp
+                    current_node = temp
                     temp = temp.next
                     if cur_index == index - 1:
-                        previous.next = temp.next
+                        current_node.next = temp.next
                         break
 
                     else:
-                        print('ariz')
                         cur_index = cur_index + 1
 
 # TimeComplexity = O(n)
@@ -94,13 +93,13 @@ class LinkedList:
             else:
 
                 temp = self.start
-                previous = temp
+                current_node = temp
                 while cur_index != index:
-                    previous = temp
+                    current_node = temp
                     temp = temp.next
                     cur_index+=1
                 newelement = Node(value)
-                previous.next = newelement
+                current_node.next = newelement
                 newelement.next = temp
 
 # TimeComplexity = O(n)
@@ -129,7 +128,8 @@ mylinkedlist.append(26)
 mylinkedlist.append(28)
 mylinkedlist.append(30)
 mylinkedlist.insert(5,11)
-mylinkedlist.delete(0)
+mylinkedlist.view()
+mylinkedlist.delete(5)
 length=mylinkedlist.length()
 mylinkedlist.view()
 
