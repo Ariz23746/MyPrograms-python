@@ -139,7 +139,7 @@ class LinkedList:
         
         self.start.next = None
         self.start = first
-
+        return self.view()        
 # --------------------------------------------------------------------#
 
 mylinkedlist = LinkedList()
@@ -151,5 +151,5 @@ mylinkedlist.append(30)
 mylinkedlist.insert(5,50)
 mylinkedlist.view()
 mylinkedlist.reverse_LinkedList()
-mylinkedlist.view()
+
  
