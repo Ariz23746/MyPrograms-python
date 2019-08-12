@@ -43,7 +43,10 @@ class Stack:
 #  # creating a Function for deleting from top element :- 
     
     def pop(self):
-        self.top = self.top.next
+        if self.top == None:
+            print("stack is empty")
+        else:    
+            self.top = self.top.next
 
 
 # --------------------------------------------------------------------#           
@@ -53,14 +56,17 @@ class Stack:
     def length(self):
         total = 0
         temp = self.top
-        while True:
-            if temp.next == None:
-                total = total + 1
-                break
-            else:
-                temp = temp.next
-                total = total + 1        
-        return total        
+        if self.top == None:
+            return total
+        else:
+            while True:
+                if temp.next == None:
+                    total = total + 1
+                    break
+                else:
+                    temp = temp.next
+                    total = total + 1        
+            return total        
 
 # --------------------------------------------------------------------#
 
@@ -86,6 +92,7 @@ mystack.push('wooooooo')
 print(mystack.length())
 mystack.view()
 mystack.pop()
+
 mystack.view()
 
 
