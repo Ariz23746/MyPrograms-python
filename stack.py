@@ -28,11 +28,6 @@ class Stack:
         if self.top == None:
             self.top = NewElement
             self.bottom = self.top
-
-        elif self.length() == 1:
-            temp = self.top
-            self.top = NewElement
-            self.top.next = self.bottom
             
         
         else:
@@ -45,7 +40,7 @@ class Stack:
 
 # --------------------------------------------------------------------# 
 
-#  # creating a Function for pushing element :- 
+#  # creating a Function for deleting from top element :- 
     
     def pop(self):
         self.top = self.top.next
